@@ -194,3 +194,133 @@ PRODUCT_COPY_FILES += \
     vendor/lge/mako/proprietary/system/vendor/lib/librs_adreno.so:system/vendor/lib/librs_adreno.so \
     vendor/lge/mako/proprietary/system/vendor/lib/libRSDriver_adreno.so:system/vendor/lib/libRSDriver_adreno.so \
     vendor/lge/mako/proprietary/system/vendor/lib/libsc-a3xx.so:system/vendor/lib/libsc-a3xx.so
+
+# Builder instructions about what proprietary system/app/apks and links to shared objects to include
+# PRODUCT_COPY_FILES += \
+#     vendor/lge/mako/proprietary/system/app/xxx:system/app/xxx \
+#     ...:...
+#     vendor/lge/mako/proprietary/system/app/xxx:system/app/xxx 
+PRODUCT_COPY_FILES += \
+    vendor/lge/mako/proprietary/system/app/Books/Books.apk:system/app/Books/Books.apk \
+    vendor/lge/mako/proprietary/system/app/CalendarGooglePrebuilt/CalendarGooglePrebuilt.apk:system/app/CalendarGooglePrebuilt/CalendarGooglePrebuilt.apk \
+    vendor/lge/mako/proprietary/system/app/Chrome/Chrome.apk:system/app/Chrome/Chrome.apk \
+    vendor/lge/mako/proprietary/system/app/CloudPrint2/CloudPrint2.apk:system/app/CloudPrint2/CloudPrint2.apk \
+    vendor/lge/mako/proprietary/system/app/DMAgent/DMAgent.apk:system/app/DMAgent/DMAgent.apk \
+    vendor/lge/mako/proprietary/system/app/Drive/Drive.apk:system/app/Drive/Drive.apk \
+    vendor/lge/mako/proprietary/system/app/EditorsDocsStub/EditorsDocsStub.apk:system/app/EditorsDocsStub/EditorsDocsStub.apk \
+    vendor/lge/mako/proprietary/system/app/EditorsSheetsStub/EditorsSheetsStub.apk:system/app/EditorsSheetsStub/EditorsSheetsStub.apk \
+    vendor/lge/mako/proprietary/system/app/EditorsSlidesStub/EditorsSlidesStub.apk:system/app/EditorsSlidesStub/EditorsSlidesStub.apk \
+    vendor/lge/mako/proprietary/system/app/FaceLock/FaceLock.apk:system/app/FaceLock/FaceLock.apk \
+    vendor/lge/mako/proprietary/system/app/GoogleCamera/GoogleCamera.apk:system/app/GoogleCamera/GoogleCamera.apk \
+    vendor/lge/mako/proprietary/system/app/GoogleContactsSyncAdapter/GoogleContactsSyncAdapter.apk:system/app/GoogleContactsSyncAdapter/GoogleContactsSyncAdapter.apk \
+    vendor/lge/mako/proprietary/system/app/GoogleEars/GoogleEars.apk:system/app/GoogleEars/GoogleEars.apk \
+    vendor/lge/mako/proprietary/system/app/GooglePinyinIME/GooglePinyinIME.apk:system/app/GooglePinyinIME/GooglePinyinIME.apk \
+    vendor/lge/mako/proprietary/system/app/GoogleTTS/GoogleTTS.apk:system/app/GoogleTTS/GoogleTTS.apk \
+    vendor/lge/mako/proprietary/system/app/LatinImeGoogle/LatinImeGoogle.apk:system/app/LatinImeGoogle/LatinImeGoogle.apk \
+    vendor/lge/mako/proprietary/system/app/iWnnIME/iWnnIME.apk:system/app/iWnnIME/iWnnIME.apk \
+    vendor/lge/mako/proprietary/system/app/Maps/Maps.apk:system/app/Maps/Maps.apk \
+    vendor/lge/mako/proprietary/system/app/MediaShortcuts/MediaShortcuts.apk:system/app/MediaShortcuts/MediaShortcuts.apk \
+    vendor/lge/mako/proprietary/system/app/Music2/Music2.apk:system/app/Music2/Music2.apk \
+    vendor/lge/mako/proprietary/system/app/NewsstandStub/NewsstandStub.apk:system/app/NewsstandStub/NewsstandStub.apk \
+    vendor/lge/mako/proprietary/system/app/Photos/Photos.apk:system/app/Photos/Photos.apk \
+    vendor/lge/mako/proprietary/system/app/PlayGames/PlayGames.apk:system/app/PlayGames/PlayGames.apk \
+    vendor/lge/mako/proprietary/system/app/PlusOne/PlusOne.apk:system/app/PlusOne/PlusOne.apk \
+    vendor/lge/mako/proprietary/system/app/PrebuiltDeskClockGoogle/PrebuiltDeskClockGoogle.apk:system/app/PrebuiltDeskClockGoogle/PrebuiltDeskClockGoogle.apk \
+    vendor/lge/mako/proprietary/system/app/PrebuiltExchange3Google/PrebuiltExchange3Google.apk:system/app/PrebuiltExchange3Google/PrebuiltExchange3Google.apk \
+    vendor/lge/mako/proprietary/system/app/PrebuiltGmail/PrebuiltGmail.apk:system/app/PrebuiltGmail/PrebuiltGmail.apk \
+    vendor/lge/mako/proprietary/system/app/PrebuiltKeepStub/PrebuiltKeepStub.apk:system/app/PrebuiltKeepStub/PrebuiltKeepStub.apk \
+    vendor/lge/mako/proprietary/system/app/talkback/talkback.apk:system/app/talkback/talkback.apk \
+    vendor/lge/mako/proprietary/system/app/Videos/Videos.apk:system/app/Videos/Videos.apk \
+    vendor/lge/mako/proprietary/system/app/WebViewGoogle/WebViewGoogle.apk:system/app/WebViewGoogle/WebViewGoogle.apk \
+    vendor/lge/mako/proprietary/system/app/YouTube/YouTube.apk:system/app/YouTube/YouTube.apk \
+    vendor/lge/mako/proprietary/system/app/Chrome/lib/arm/libchromium_android_linker.so:system/app/Chrome/lib/arm/libchromium_android_linker.so \
+    vendor/lge/mako/proprietary/system/app/FaceLock/lib/arm/libfacelock_jni.so:system/app/FaceLock/lib/arm/libfacelock_jni.so \
+    vendor/lge/mako/proprietary/system/app/iWnnIME/lib/arm/libnjexyomi.so:system/app/iWnnIME/lib/arm/libnjexyomi.so \
+    vendor/lge/mako/proprietary/system/app/iWnnIME/lib/arm/libiwnn.so:system/app/iWnnIME/lib/arm/libiwnn.so \
+    vendor/lge/mako/proprietary/system/app/iWnnIME/lib/arm/libnjcon.so:system/app/iWnnIME/lib/arm/libnjcon.so \
+    vendor/lge/mako/proprietary/system/app/iWnnIME/lib/arm/libnjubase1.so:system/app/iWnnIME/lib/arm/libnjubase1.so \
+    vendor/lge/mako/proprietary/system/app/iWnnIME/lib/arm/libnjtan.so:system/app/iWnnIME/lib/arm/libnjtan.so \
+    vendor/lge/mako/proprietary/system/app/iWnnIME/lib/arm/libennjyomi.so:system/app/iWnnIME/lib/arm/libennjyomi.so \
+    vendor/lge/mako/proprietary/system/app/iWnnIME/lib/arm/lib_dic_en_tablet_USUK.conf.so:system/app/iWnnIME/lib/arm/lib_dic_en_tablet_USUK.conf.so \
+    vendor/lge/mako/proprietary/system/app/iWnnIME/lib/arm/libnjemoji.so:system/app/iWnnIME/lib/arm/libnjemoji.so \
+    vendor/lge/mako/proprietary/system/app/iWnnIME/lib/arm/libennjubase1gb.so:system/app/iWnnIME/lib/arm/libennjubase1gb.so \
+    vendor/lge/mako/proprietary/system/app/iWnnIME/lib/arm/libnjfzk.so:system/app/iWnnIME/lib/arm/libnjfzk.so \
+    vendor/lge/mako/proprietary/system/app/iWnnIME/lib/arm/libennjubase1us.so:system/app/iWnnIME/lib/arm/libennjubase1us.so \
+    vendor/lge/mako/proprietary/system/app/iWnnIME/lib/arm/libennjubase1.so:system/app/iWnnIME/lib/arm/libennjubase1.so \
+    vendor/lge/mako/proprietary/system/app/iWnnIME/lib/arm/libnjname.so:system/app/iWnnIME/lib/arm/libnjname.so \
+    vendor/lge/mako/proprietary/system/app/iWnnIME/lib/arm/libennjcon.so:system/app/iWnnIME/lib/arm/libennjcon.so \
+    vendor/lge/mako/proprietary/system/app/iWnnIME/lib/arm/libnjubase2.so:system/app/iWnnIME/lib/arm/libnjubase2.so \
+    vendor/lge/mako/proprietary/system/app/iWnnIME/lib/arm/libnjexyomi_plus.so:system/app/iWnnIME/lib/arm/libnjexyomi_plus.so \
+    vendor/lge/mako/proprietary/system/app/iWnnIME/lib/arm/libnjaddress.so:system/app/iWnnIME/lib/arm/libnjaddress.so \
+    vendor/lge/mako/proprietary/system/app/iWnnIME/lib/arm/libennjubase3.so:system/app/iWnnIME/lib/arm/libennjubase3.so \
+    vendor/lge/mako/proprietary/system/app/iWnnIME/lib/arm/lib_dic_en_USUK.conf.so:system/app/iWnnIME/lib/arm/lib_dic_en_USUK.conf.so \
+    vendor/lge/mako/proprietary/system/app/iWnnIME/lib/arm/libnjkaomoji.so:system/app/iWnnIME/lib/arm/libnjkaomoji.so \
+    vendor/lge/mako/proprietary/system/app/iWnnIME/lib/arm/lib_dic_morphem_ja_JP.conf.so:system/app/iWnnIME/lib/arm/lib_dic_morphem_ja_JP.conf.so \
+    vendor/lge/mako/proprietary/system/app/iWnnIME/lib/arm/lib_dic_ja_JP.conf.so:system/app/iWnnIME/lib/arm/lib_dic_ja_JP.conf.so \
+    vendor/lge/mako/proprietary/system/app/iWnnIME/lib/arm/libennjubase2.so:system/app/iWnnIME/lib/arm/libennjubase2.so \
+    vendor/lge/mako/proprietary/system/app/iWnnIME/lib/arm/libEnjemailuri.so:system/app/iWnnIME/lib/arm/libEnjemailuri.so \
+    vendor/lge/mako/proprietary/system/app/LatinImeGoogle/lib/arm/libjni_keyboarddecoder.so:system/app/lib/arm/libjni_keyboarddecoder.so \
+    vendor/lge/mako/proprietary/system/app/LatinImeGoogle/lib/arm/libjni_latinimegoogle.so:system/app/lib/arm/libjni_latinimegoogle.so
+
+# Builder instructions about what proprietary system/app/apks and links to shared objects to include
+# PRODUCT_COPY_FILES += \
+#     vendor/lge/mako/proprietary/system/priv-app/xxx:system/priv-app/xxx \
+#     ...:...
+#     vendor/lge/mako/proprietary/system/priv-app/xxx:system/priv-app/xxx 
+PRODUCT_COPY_FILES += \
+    vendor/lge/mako/proprietary/system/priv-app/AndroidForWork/AndroidForWork.apk:system/priv-app/AndroidForWork/AndroidForWork.apk \
+    vendor/lge/mako/proprietary/system/priv-app/ConfigUpdater/ConfigUpdater.apk:system/priv-app/ConfigUpdater/ConfigUpdater.apk \
+    vendor/lge/mako/proprietary/system/priv-app/GCS/GCS.apk:system/priv-app/GCS/GCS.apk \
+    vendor/lge/mako/proprietary/system/priv-app/GoogleBackupTransport/GoogleBackupTransport.apk:system/priv-app/GoogleBackupTransport/GoogleBackupTransport.apk \
+    vendor/lge/mako/proprietary/system/priv-app/GoogleContacts/GoogleContacts.apk:system/priv-app/GoogleContacts/GoogleContacts.apk \
+    vendor/lge/mako/proprietary/system/priv-app/GoogleDialer/GoogleDialer.apk:system/priv-app/GoogleDialer/GoogleDialer.apk \
+    vendor/lge/mako/proprietary/system/priv-app/GoogleFeedback/GoogleFeedback.apk:system/priv-app/GoogleFeedback/GoogleFeedback.apk \
+    vendor/lge/mako/proprietary/system/priv-app/GoogleLoginService/GoogleLoginService.apk:system/priv-app/GoogleLoginService/GoogleLoginService.apk \
+    vendor/lge/mako/proprietary/system/priv-app/GoogleOneTimeInitializer/GoogleOneTimeInitializer.apk:system/priv-app/GoogleOneTimeInitializer/GoogleOneTimeInitializer.apk \
+    vendor/lge/mako/proprietary/system/priv-app/GooglePackageInstaller/GooglePackageInstaller.apk:system/priv-app/GooglePackageInstaller/GooglePackageInstaller.apk \
+    vendor/lge/mako/proprietary/system/priv-app/GooglePartnerSetup/GooglePartnerSetup.apk:system/priv-app/GooglePartnerSetup/GooglePartnerSetup.apk \
+    vendor/lge/mako/proprietary/system/priv-app/GoogleServicesFramework/GoogleServicesFramework.apk:system/priv-app/GoogleServicesFramework/GoogleServicesFramework.apk \
+    vendor/lge/mako/proprietary/system/priv-app/Phonesky/Phonesky.apk:system/priv-app/Phonesky/Phonesky.apk \
+    vendor/lge/mako/proprietary/system/priv-app/PrebuiltGmsCore/PrebuiltGmsCore.apk:system/priv-app/PrebuiltGmsCore/PrebuiltGmsCore.apk \
+    vendor/lge/mako/proprietary/system/priv-app/SetupWizard/SetupWizard.apk:system/priv-app/SetupWizard/SetupWizard.apk \
+    vendor/lge/mako/proprietary/system/priv-app/TagGoogle/TagGoogle.apk:system/priv-app/TagGoogle/TagGoogle.apk \
+    vendor/lge/mako/proprietary/system/priv-app/Velvet/lib/arm/libgoogle_speech_micro_jni.so:system/priv-app/Velvet/lib/arm/libgoogle_speech_micro_jni.so \
+    vendor/lge/mako/proprietary/system/priv-app/Velvet/lib/arm/libvcdecoder_jni.so:system/priv-app/Velvet/lib/arm/libvcdecoder_jni.so \
+    vendor/lge/mako/proprietary/system/priv-app/Velvet/lib/arm/libgoogle_speech_jni.so:system/priv-app/Velvet/lib/arm/libgoogle_speech_jni.so \
+    vendor/lge/mako/proprietary/system/priv-app/Velvet/lib/arm/libcronet.so:system/priv-app/Velvet/lib/arm/libcronet.so \
+    vendor/lge/mako/proprietary/system/priv-app/Velvet/Velvet.apk:system/priv-app/Velvet/Velvet.apk
+
+# Builder instructions about what additional proprietary libs to include to support proprietary apks
+# PRODUCT_COPY_FILES += \
+#     vendor/lge/mako/proprietary/system/lib/xxx:system/lib/xxx \
+#     ...:...
+#     vendor/lge/mako/proprietary/system/lib/xxx:system/lib/xxx 
+PRODUCT_COPY_FILES += \
+    vendor/lge/mako/proprietary/system/lib/libchromium_android_linker.so:system/lib/libchromium_android_linker.so \
+    vendor/lge/mako/proprietary/system/lib/libfacelock_jni.so:system/lib/libfacelock_jni.so \
+    vendor/lge/mako/proprietary/system/lib/libnjexyomi.so:system/app/lib/libnjexyomi.so \
+    vendor/lge/mako/proprietary/system/lib/libiwnn.so:system/app/lib/libiwnn.so \
+    vendor/lge/mako/proprietary/system/lib/libnjcon.so:system/lib/libnjcon.so \
+    vendor/lge/mako/proprietary/system/lib/libnjubase1.so:system/lib/libnjubase1.so \
+    vendor/lge/mako/proprietary/system/lib/libnjtan.so:system/app/lib/libnjtan.so \
+    vendor/lge/mako/proprietary/system/lib/libennjyomi.so:system/app/lib/libennjyomi.so \
+    vendor/lge/mako/proprietary/system/lib/lib_dic_en_tablet_USUK.conf.so:system/lib/lib_dic_en_tablet_USUK.conf.so \
+    vendor/lge/mako/proprietary/system/lib/libnjemoji.so:system/lib/libnjemoji.so \
+    vendor/lge/mako/proprietary/system/lib/libennjubase1gb.so:system/lib/libennjubase1gb.so \
+    vendor/lge/mako/proprietary/system/lib/libnjfzk.so:system/app/lib/libnjfzk.so \
+    vendor/lge/mako/proprietary/system/lib/libennjubase1us.so:system/lib/libennjubase1us.so \
+    vendor/lge/mako/proprietary/system/lib/libennjubase1.so:system/lib/libennjubase1.so \
+    vendor/lge/mako/proprietary/system/lib/libnjname.so:system/lib/libnjname.so \
+    vendor/lge/mako/proprietary/system/lib/libennjcon.so:system/lib/libennjcon.so \
+    vendor/lge/mako/proprietary/system/lib/libnjubase2.so:system/lib/libnjubase2.so \
+    vendor/lge/mako/proprietary/system/lib/libnjexyomi_plus.so:system/lib/libnjexyomi_plus.so \
+    vendor/lge/mako/proprietary/system/lib/libnjaddress.so:system/lib/libnjaddress.so \
+    vendor/lge/mako/proprietary/system/lib/libennjubase3.so:system/lib/libennjubase3.so \
+    vendor/lge/mako/proprietary/system/lib/lib_dic_en_USUK.conf.so:system/lib/lib_dic_en_USUK.conf.so \
+    vendor/lge/mako/proprietary/system/lib/libnjkaomoji.so:system/lib/libnjkaomoji.so \
+    vendor/lge/mako/proprietary/system/lib/lib_dic_morphem_ja_JP.conf.so:system/lib/lib_dic_morphem_ja_JP.conf.so \
+    vendor/lge/mako/proprietary/system/lib/lib_dic_ja_JP.conf.so:system/lib/lib_dic_ja_JP.conf.so \
+    vendor/lge/mako/proprietary/system/lib/libennjubase2.so:system/lib/libennjubase2.so \
+    vendor/lge/mako/proprietary/system/lib/libEnjemailuri.so:system/lib/libEnjemailuri.so \
+    vendor/lge/mako/proprietary/system/lib/libjni_keyboarddecoder.so:system/lib/libjni_keyboarddecoder.so \
+    vendor/lge/mako/proprietary/system/lib/libjni_latinimegoogle.so:system/lib/libjni_latinimegoogle.so
