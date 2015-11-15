@@ -1,0 +1,42 @@
+# Run this script from the vendor/lge/mako/proprietary/system/app directory
+# Script requires no argument
+echo "PRODUCT_PACKAGES += \\" >product_packages
+echo "LOCAL_REQUIRED_MODULES += \\" >temp
+echo "PRODUCT_COPY_FILES += \\" >product_copy_files
+
+for each_prebuilt in `ls --hide=product_packages --hide=temp --hide=local_required_modules --hide=product_copy_files`
+do
+   # Create the Android makefile for the apk to add
+   echo "Processing " $each_prebuilt
+   echo "    $each_prebuilt \\" >>product_packages
+   echo "LOCAL_PATH := \$(call my-dir)" >$each_prebuilt/Android.mk
+   echo "include \$(CLEAR_VARS)" >>$each_prebuilt/Android.mk
+   echo "LOCAL_MODULE := $each_prebuilt" >>$each_prebuilt/Android.mk
+   echo "LOCAL_MODULE_TAGS := optional" >>$each_prebuilt/Android.mk
+   echo "LOCAL_CERTIFICATE := PRESIGNED" >>$each_prebuilt/Android.mk
+   echo "LOCAL_SRC_FILES := \$(LOCAL_MODULE).apk" >>$each_prebuilt/Android.mk
+   echo "LOCAL_MODULE_CLASS := APPS" >>$each_prebuilt/Android.mk
+   echo "LOCAL_MODULE_SUFFIX := \$(COMMON_ANDROID_PACKAGE_SUFFIX)" >>$each_prebuilt/Android.mk
+   echo "include \$(BUILD_PREBUILT)" >>$each_prebuilt/Android.mk
+
+   cd $each_prebuilt
+   for each_lib in `ls *.so`
+   do
+      echo "    $each_lib \\" >>../temp
+      echo "    vendor/lge/mako/proprietary/system/$each_lib:system/lib/$each_lib \\" >>../product_copy_files
+      # Include instructions to add libraries in the Android makefile created above
+      echo "" >> Android.mk
+      echo "include \$(CLEAR_VARS)" >>Android.mk
+      echo "LOCAL_MODULE := $each_lib" >>Android.mk
+      echo "LOCAL_SRC_FILES := $each_lib" >>Android.mk
+      echo "LOCAL_MODULE_TAGS := optional" >>Android.mk
+      echo "LOCAL_MODULE_SUFFIX := .so" >>Android.mk
+      echo "LOCAL_MODULE_CLASS := SHARED_LIBRARIES" >>Android.mk
+      echo "include \$(BUILD_PREBUILT)" >>Android.mk
+      sed "/LOCAL_MODULE :=/s/.so//g" Android.mk >temp
+      mv temp Android.mk
+   done
+   cd ..
+done
+sed "s/.so//g" temp >local_required_modules
+rm temp
